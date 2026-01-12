@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products - RedStore</title>
+    <title>All Products - FreshGrocer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
@@ -12,39 +12,83 @@
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                <a href="index.html"><img src="images/logo.png" width="125px" alt="FreshGrocer Logo"></a>
             </div>
             <nav>
                 <ul id="MenuItems">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
+                    <li><a href="products.html" class="active">Groceries</a></li>
                     <li><a href="">About</a></li>
                     <li><a href="">Contact</a></li>
                     <li><a href="account.html">Account</a></li>
                 </ul>
             </nav>
-            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
-            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" alt="Cart"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()" alt="Menu">
         </div>
     </div>
 
     <div class="small-container">
         <div class="row row-2">
-            <h2>All Products</h2>
+            <h2>All Groceries</h2>
             <select>
                 <option>Default Sorting</option>
                 <option>Sort by price</option>
-                <option>Sort by popularity</option>
+                <option>Sort by freshness</option>
                 <option>Sort by rating</option>
                 <option>Sort by sale</option>
             </select>
         </div>
         
         <div class="row">
-            <div class="col-4"><img src="images/Gemini_Generated_Image_red_apples.png"><h4>Red Printed tshirt</h4><div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div><p>$50.00</p></div>
-            <div class="col-4"><img src="images/product-2.jpg"><h4>Red Printed tshirt</h4><div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></div><p>$50.00</p></div>
-            <div class="col-4"><img src="images/product-3.jpg"><h4>Red Printed tshirt</h4><div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i></div><p>$50.00</p></div>
-            <div class="col-4"><img src="images/product-4.jpg"><h4>Red Printed tshirt</h4><div class="rating"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i></div><p>$50.00</p></div>
+            <div class="col-4">
+                <img src="images/Gemini_Generated_Image_red_apples.png" alt="Red Apples">
+                <h4>Organic Red Apples</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$3.00 / kg</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Gemini_Generated_Image_fresh_bananas.png" alt="Fresh Bananas">
+                <h4>Fresh Bananas</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$1.50 / kg</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Gemini_Generated_Image_brocoli.png" alt="Broccoli">
+                <h4>Broccoli Heads</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$2.00 / pc</p>
+            </div>
+            <div class="col-4">
+                <img src="images/Gemini_Generated_Image_carrots.png" alt="Carrots">
+                <h4>Fresh Carrots</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$1.20 / kg</p>
+            </div>
         </div>
         
         <div class="page-btn">
@@ -60,21 +104,21 @@
             <div class="row">
                 <div class="footer-col-1">
                     <h3>Download our App</h3>
-                    <p>Download App for Android and iOS mobile phone</p>
+                    <p>Order fresh groceries from your Android and iOS mobile phone.</p>
                     <div class="app-logo">
-                        <img src="images/play-store.png">
-                        <img src="images/app-store.png">
+                        <img src="images/play-store.png" alt="Play Store">
+                        <img src="images/app-store.png" alt="App Store">
                     </div>
                 </div>
                 <div class="footer-col-2">
-                    <img src="images/logo-white.png">
-                    <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                    <img src="images/logo-white.png" alt="FreshGrocer Logo">
+                    <p>Our Purpose Is To Provide Fresh, Organic, and Healthy Food to Every Household.</p>
                 </div>
                 <div class="footer-col-3">
                     <h3>Useful Links</h3>
                     <ul>
                         <li>Coupons</li>
-                        <li>Blog Post</li>
+                        <li>Recipes Blog</li>
                         <li>Return Policy</li>
                         <li>Join Affiliate</li>
                     </ul>
