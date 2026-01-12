@@ -1,5 +1,5 @@
 # FUTURE_FS_02
-# 🛒 Mini E-Commerce Storefront (Internship Task 2)
+# 🛒 Mini E-Commerce Storefront (Task 2)
 Mini e-commerce platform with product listings, shopping cart, and checkout simulation.
 
 ## Project Overview
