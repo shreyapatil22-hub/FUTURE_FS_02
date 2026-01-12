@@ -206,5 +206,56 @@
             }
         }
     </script>
+<script>
+    // Function to fetch products from database
+    async function loadProducts() {
+        try {
+            const response = await fetch('http://localhost:5000/api/products');
+            const products = await response.json();
+
+            const container = document.getElementById('featured-products-container');
+            container.innerHTML = ''; // Clear "Loading..." text
+
+            products.forEach(product => {
+                // Only show "featured" category items if you wish
+                if(product.category === 'featured') { 
+                    const productHTML = `
+                        <div class="col-4">
+                            <img src="${product.image}" alt="${product.name}">
+                            <h4>${product.name}</h4>
+                            <div class="rating">
+                                ${getStarRating(product.rating)}
+                            </div>
+                            <p>$${product.price.toFixed(2)} / kg</p>
+                        </div>
+                    `;
+                    container.innerHTML += productHTML;
+                }
+            });
+
+        } catch (error) {
+            console.error('Error connecting to DB:', error);
+        }
+    }
+
+    // Helper function to generate stars
+    function getStarRating(rating) {
+        let stars = '';
+        for (let i = 0; i < 5; i++) {
+            if (i < rating) {
+                stars += '<i class="fa fa-star"></i>';
+            } else {
+                stars += '<i class="fa fa-star-o"></i>';
+            }
+        }
+        return stars;
+    }
+
+    // Run the function when page loads
+    window.onload = () => {
+        loadProducts();
+        // Keep your existing menu toggle code here
+    };
+</script>
 </body>
 </html>
